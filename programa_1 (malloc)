@@ -17,3 +17,6 @@ int main (){
 	}
 return 0;
 }
+/*dentro de la funcion main vamos a declar 3 variables,preguntamos de que tamaño sera el arreglo reservamos la memoria con malloc,
+verificamos que el apuntador sea diferente de nullo para poder empezar a llenar el arreglo con ayuda de un for y al mismo timepo vamos 
+imprimiendo los ceros,liberamos la memoria para terminar*/
