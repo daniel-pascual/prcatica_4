@@ -17,3 +17,6 @@ int main(){
 	}
 	return 0;
 }
+/*como en el caso aterior declaramos 3 variables y preguntamos de cuanto sera el tamaño d ela memoria,
+reservamos con calloc y despues veroificamos que e¿sea difernete a nulo para poder ir llenando 
+el arreglo con un for, le avisamos al usuario que iberamos la memoria y finalmente lo hacemos.*/
