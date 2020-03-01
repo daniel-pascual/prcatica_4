@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (){
+	int *arre, *arre2, num, cont;
+	printf("cuantos elementos tiene el conjunto?\n");
+	scanf("%d",&num);
+	arre = (int *)malloc (num * sizeof(int));
+	if (arre!=NULL) {
+		for (cont=0 ; cont < num ; cont++){
+			printf("imgrese el elemento %d del conjunto\n",cont+1);
+			scanf("%d",(arre+cont));
+		}
+		printf("vector insertado:\n\t[");
+		for (cont=0 ; cont < num ; cont++){ 
+			printf("\t%d",*(arre+cont));
+		}	
+		printf("\t]\n");
+		printf("se aumenta la memoria al doble\n");
+		num *= 2;
+		arre2 = (int *)realloc (arre,num*sizeof(int));
+		if (arre2 != NULL){
+			arre = arre2;
+			for(; cont < num; cont++){
+				printf("ingrese el elemento %d del conjunto\n",cont+1);
+				scanf("%d",(arre2+cont));
+			}
+			printf("vector insertado:\n\t[");
+			for(cont=0; cont < num; cont++){
+				printf("\t%d", *(arre2+cont));
+			}
+			printf("\t]\n");
+		}
+		free(arre);
+	}
+	return 0;
+}
+/*creamos 4 varibles dos apuntadores y otras 2,preguntamos el tamaño del arreglo y reservamos con malloc,verificamos que sea diferente
+de nulo yt vamos llenaod el arreglo lo vamos imprimiendo,posterioemente le avismos al usuario que vamos aumentar el 
+tamaño de la memoria al doble con ayuda de realloc luego tambien con un for vamos imprmiendo la la memoria finalmente liberamos la meoria con 
+"free".*/
