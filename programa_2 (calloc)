@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+	int *arre, num, cont;
+       	printf("cuantos elementos tiene el conjunto?\n");
+	scanf("%d", &num);
+	arreglo = (int *)calloc (num, sizeof(int));
+	if(arre!=NULL){
+		printf("vector reservado:\n\t[");
+		for(cont=0; cont<num; cont++){
+			printf("\t%d",*(arre+cont));
+		}
+		printf("\t]\n");
+		printf("se libero el espacio reservado\n");
+		free(arreglo);
+	}
+	return 0;
+}
